@@ -1,0 +1,71 @@
+/* .AppBackgoundColor{
+  background-color: aqua;
+} */
+
+body
+{
+  text-align: center;
+  /* font-family: 'Divid 20px'; */
+  background-color: aqua;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 10% 20% 70%; */
+  grid-template-rows: minmax(100px,auto);
+  /* grid-template-rows: repeat(3, 1fr); */
+
+  max-width: 960px;
+  margin: 0 auto;
+  grid-column-gap: 10px;
+  grid-template-areas:
+  "header   header header  header"
+  "asid     asid   main    main"
+  "nav      nav    main    main"
+  "section section section section"
+  "section section section section"
+  "footer  footer  footer  footer";
+  background-color: aliceblue;
+  /* padding: 0%; */
+}
+
+#content div:nth-child(even){
+ background-color: #777;
+}
+.divBasic{
+  background-color: yellow;
+  padding: 30px;
+  /* align-content: center; */
+  /* text-align: center; */
+}
+
+.divHeader{
+  grid-area: header;
+  padding: 30px;
+}
+
+.divAsid{
+  grid-area: asid;
+  padding: 30px;
+}
+
+.divMain{
+  grid-area: main;
+  padding: 30px;
+}
+.divNav{
+  grid-area: nav;
+  padding: 30px;
+  /* margin-left: 0%; */
+}
+
+.divSection{
+  grid-area: section;
+  padding: 30px;
+}
+
+.divFooter{
+  grid-area: footer;
+  padding: 30px;
+}
